@@ -37,7 +37,7 @@ export class Slide {
   }
 
   onMove(event) {
-    const pointPosition = (event.type === "mousemove") ? event.clientX : event.changedTouches[0]
+    const pointPosition = (event.type === "mousemove") ? event.clientX : event.changedTouches[0].clientX
     const finalPosition = this.updatePosition(pointPosition)
     this.moveSlide(finalPosition)
   }
@@ -67,10 +67,10 @@ export class Slide {
   }
 
   addSlideEvents() {
-    this.wrapper.addEventListener("mousedown", this.onStart)
-    this.wrapper.addEventListener("touchstart", this.onStart)
-    this.wrapper.addEventListener("mouseup", this.onEnd)
-    this.wrapper.addEventListener("touchend", this.onEnd)
+    this.wrapper.addEventListener('mousedown', this.onStart);
+    this.wrapper.addEventListener('touchstart', this.onStart);
+    this.wrapper.addEventListener('mouseup', this.onEnd);
+    this.wrapper.addEventListener('touchend', this.onEnd);
   }
 
   // Slides Config
