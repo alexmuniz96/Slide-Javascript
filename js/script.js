@@ -4,4 +4,4 @@ const slide = new SlideNav(".slide", ".wrapper")
 slide.init()
 slide.addArrow(".next", ".prev")
 
-console.log(slide)
+slide.addControl()
